@@ -1,62 +1,66 @@
 const productos = [
   {
     id: "1",
-    nombre: "Pollo en salsa verde",
-    descripcion: "Paquete de 5 tamales con pollo en salsa verde con cilantro",
-    precio: 100,
+    nombre: "Tamales de pollo en salsa verde",
+    descripcion:
+      "Paquete de 5 tamales con pechuga de pollo en salsa de chiles y cilantro",
+    precio: 70,
     img: "../img/tamalverde.jpeg",
     idCat: "1",
   },
   {
     id: "2",
-    nombre: "Pollo con mole",
-    descripcion: "Paquete de 5 tamales con pollo en mole poblano",
-    precio: 100,
-    img: "../img/tamalmole.jpg",
+    nombre: "Tamales de chicharrón prensado",
+    descripcion: "Paquete de 5 tamales de chicharrón prensado en salsa verde",
+    precio: 70,
+    img: "../img/tamalchicharron.jpg",
     idCat: "1",
   },
   {
     id: "3",
-    nombre: "Rajas con queso",
+    nombre: "Tamales de rajas con queso",
     descripcion:
       "Paquete de 5 tamales con rajas de jalapeño, queso manchego y salsa roja",
-    precio: 110,
+    precio: 70,
     img: "../img/tamalrajas.jpg",
     idCat: "1",
   },
   {
     id: "4",
-    nombre: "Cerdo en chile rojo",
+    nombre: "Tamales de puerco en chile rojo",
     descripcion:
       "Paquete de 5 tamales con carne de cerdo en adobo de chile rojo",
-    precio: 90,
+    precio: 70,
     img: "../img/tamalrojo.jpg",
     idCat: "1",
   },
   {
     id: "5",
+    nombre: "Tamal arcoiris",
+    descripcion:
+      "Paquete con 5 tamales con base de piña y coco, adornado con cacahuate y chispas de sabor",
+    precio: 70,
+    img: "../img/tamalarcoiris.jpg",
+    idCat: "1",
+  },
+  {
+    id: "6",
     nombre: "Atole de galleta",
     descripcion: "Un litro de atole de galletas",
     precio: 50,
     img: "../img/atolegalleta.jpg",
     idCat: "2",
   },
+
   {
-    id: "6",
+    id: "7",
     nombre: "Atole de guayaba",
     descripcion: "Un litro de atole de guayabas frescas",
     precio: 60,
     img: "../img/atoleguayaba.jpg",
     idCat: "2",
   },
-  {
-    id: "7",
-    nombre: "Atole de chocolate",
-    descripcion: "Un litro de atole de chocolate",
-    precio: 70,
-    img: "../img/atolechocolate.jpg",
-    idCat: "2",
-  },
+
   {
     id: "8",
     nombre: "Brownies",

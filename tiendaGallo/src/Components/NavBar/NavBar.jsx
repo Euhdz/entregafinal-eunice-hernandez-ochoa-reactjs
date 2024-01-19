@@ -6,14 +6,17 @@ const NavBar = () => {
   return (
     <header>
       <Link to="/">
+        <img
+          className="logo-header"
+          src="../img/logo_tamales_gallo.png"
+          alt="Logo Tamales Gallo"
+        />
+      </Link>
+
+      <Link to="/">
         <h1>Tamales Gallo</h1>
       </Link>
 
-      <img
-        className="logo-header"
-        src="./img/logo_tamales_gallo.png"
-        alt="Logo Tamales Gallo"
-      />
       <nav>
         <ul>
           <li>

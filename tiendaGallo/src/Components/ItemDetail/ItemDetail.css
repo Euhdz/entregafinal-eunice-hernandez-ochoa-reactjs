@@ -1,8 +1,9 @@
 .contenedorItem {
   text-align: center;
-  border: 1px;
   border-color: black;
   margin: 3rem;
+  border-width: 5px;
+  border-style: solid;
 }
 
 .contenedorItem img {

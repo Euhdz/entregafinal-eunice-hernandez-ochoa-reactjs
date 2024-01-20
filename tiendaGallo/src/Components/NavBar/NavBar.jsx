@@ -13,21 +13,27 @@ const NavBar = () => {
         />
       </Link>
 
-      <Link to="/">
+      <Link className="navEstilo" to="/">
         <h1>Tamales Gallo</h1>
       </Link>
 
       <nav>
         <ul>
           <li>
-            <NavLink to="/categoria/1">Tamales</NavLink>
+            <NavLink className="navEstilo" to="/categoria/1">
+              Tamales
+            </NavLink>
           </li>
 
           <li>
-            <NavLink to="/categoria/2">Atoles</NavLink>
+            <NavLink className="navEstilo" to="/categoria/2">
+              Atoles
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/categoria/3">Postres</NavLink>
+            <NavLink className="navEstilo" to="/categoria/3">
+              Postres
+            </NavLink>
           </li>
         </ul>
       </nav>

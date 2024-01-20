@@ -3,6 +3,7 @@ header {
   align-items: center;
   justify-content: space-around;
   background-color: #577439;
+  padding: 0.5rem;
   color: white;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;

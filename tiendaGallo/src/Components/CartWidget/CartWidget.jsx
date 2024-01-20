@@ -7,7 +7,7 @@ const CartWidget = () => {
       <img
         className="imgCarrito"
         src="../img/shopping-cart-white.png"
-        alt="shopping cart"
+        alt="shopping cart - Cart icon by icons8"
       />
       <strong> 1 </strong>
     </div>

@@ -7,6 +7,7 @@ const productos = [
     precio: 70,
     img: "../img/tamalverde.jpeg",
     idCat: "1",
+    stock: 100,
   },
   {
     id: "2",
@@ -15,6 +16,7 @@ const productos = [
     precio: 70,
     img: "../img/tamalchicharron.jpg",
     idCat: "1",
+    stock: 100,
   },
   {
     id: "3",
@@ -24,6 +26,7 @@ const productos = [
     precio: 70,
     img: "../img/tamalrajas.jpg",
     idCat: "1",
+    stock: 100,
   },
   {
     id: "4",
@@ -33,6 +36,7 @@ const productos = [
     precio: 70,
     img: "../img/tamalrojo.jpg",
     idCat: "1",
+    stock: 100,
   },
   {
     id: "5",
@@ -42,6 +46,7 @@ const productos = [
     precio: 70,
     img: "../img/tamalarcoiris.jpg",
     idCat: "1",
+    stock: 100,
   },
   {
     id: "6",
@@ -50,6 +55,7 @@ const productos = [
     precio: 50,
     img: "../img/atolegalleta.jpg",
     idCat: "2",
+    stock: 100,
   },
 
   {
@@ -59,6 +65,7 @@ const productos = [
     precio: 60,
     img: "../img/atoleguayaba.jpg",
     idCat: "2",
+    stock: 100,
   },
 
   {
@@ -68,6 +75,7 @@ const productos = [
     precio: 150,
     img: "../img/brownies.jpg",
     idCat: "3",
+    stock: 100,
   },
   {
     id: "9",
@@ -76,6 +84,7 @@ const productos = [
     precio: 120,
     img: "../img/muffinzanahoria.jpg",
     idCat: "3",
+    stock: 100,
   },
   {
     id: "10",
@@ -84,6 +93,7 @@ const productos = [
     precio: 140,
     img: "../img/paynuez.jpg",
     idCat: "3",
+    stock: 100,
   },
 ];
 

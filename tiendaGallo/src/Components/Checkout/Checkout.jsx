@@ -1,9 +1,11 @@
 import React from "react";
-
 import { useState, useContext } from "react";
 import { CarritoContext } from "../../context/CarritoContext";
 import { db } from "../../services/config";
 import { collection, addDoc } from "firebase/firestore";
+import Swal from "sweetalert2";
+
+import "./Checkout.css";
 
 const Checkout = () => {
   const { carrito, vaciarCarrito, total } = useContext(CarritoContext);
@@ -30,7 +32,7 @@ const Checkout = () => {
     if (email !== emailConfirmacion) {
       setError("Por favor verifique que los emails coincidan");
       return;
-    }
+    } else setError("");
 
     //Creamos un objeto con todos los datos de la orden:
 
@@ -57,6 +59,21 @@ const Checkout = () => {
       .then((docRef) => {
         setOrdenId(docRef.id);
         vaciarCarrito();
+        //Limpiamos los campos del formulario:
+        setNombre("");
+        setApellido("");
+        setTelefono("");
+        setEmail("");
+        setEmailConfirmacion("");
+        setError("");
+        //Mostrar el ID de la orden con una alerta:
+        Swal.fire({
+          title: "Se generó con éxito tu orden de compra",
+          text: `El número de tu orden es: ${docRef.id}`,
+          icon: "success",
+        }).then(function () {
+          window.location = "./";
+        });
       })
       .catch((error) => {
         console.log("Error al crear la orden de compra", error);
@@ -126,16 +143,26 @@ const Checkout = () => {
 
         {error && <p style={{ color: "red" }}> {error} </p>}
 
-        <button> Finalizar Orden </button>
+        <div>
+          <button className="btnCheckout" disabled={carrito.length === 0}>
+            {" "}
+            Finalizar Orden{" "}
+          </button>
+          <button className="btnCheckout" type="reset">
+            {" "}
+            Borrar{" "}
+          </button>
+        </div>
+        {/* PENDIENTE: meter estilos a botones, definir clase btnCheckout en css */}
 
-        {ordenId && (
+        {/* {ordenId && (
           <strong>
             {" "}
-            Gracias por tu compra. Tu número de orden esel siguiente: {
+            Gracias por tu compra. Tu número de orden es el siguiente: {
               ordenId
             }{" "}
           </strong>
-        )}
+        )} */}
       </form>
     </div>
   );

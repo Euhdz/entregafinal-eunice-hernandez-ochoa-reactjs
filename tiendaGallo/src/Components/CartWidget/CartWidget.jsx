@@ -13,7 +13,9 @@ const CartWidget = () => {
           src="../img/shopping-cart-white.png"
           alt="shopping cart - Cart icon by icons8"
         />
-        {cantidadTotal > 0 && <strong> {cantidadTotal} </strong>}
+        {cantidadTotal > 0 && (
+          <strong className="cantCarrito"> {cantidadTotal} </strong>
+        )}
       </Link>
     </div>
   );

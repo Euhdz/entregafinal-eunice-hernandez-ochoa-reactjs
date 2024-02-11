@@ -2,16 +2,17 @@ import React from "react";
 import "./Item.css";
 import { Link } from "react-router-dom";
 
-const Item = ({ id, nombre, precio, img }) => {
+const Item = ({ id, nombre, img }) => {
   return (
-    <div className="cardProducto">
-      <img src={img} alt={nombre} />
-      <h3>
-        {id}. {nombre}{" "}
-      </h3>
-
-      <Link to={`/item/${id}`}> Ver Detalles </Link>
-      {/* <button> Ver detalles </button> */}
+    <div className="card-producto-contenedor">
+      <div className="cardProducto">
+        <img src={img} alt={nombre} />
+        <div className="card-producto-nombre">
+          <h3>{nombre} </h3>
+        </div>
+        <Link to={`/item/${id}`}> Ver Detalles </Link>
+        {/* <button> Ver detalles </button> */}
+      </div>
     </div>
   );
 };

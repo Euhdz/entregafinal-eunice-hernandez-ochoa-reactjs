@@ -2,15 +2,14 @@
   color: black;
   align-items: center;
   text-align: center;
-  width: 600px;
-  border-color: #577439;
+  width: 100%;
   background-color: whitesmoke;
   margin: auto;
-  margin-top: 3rem;
+  margin-top: 0rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   border-width: 3px;
-  border-style: solid;
+  border-style: none;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }

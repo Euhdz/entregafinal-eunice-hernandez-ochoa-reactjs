@@ -1,10 +1,10 @@
-import NavBar from "./Components/NavBar/NavBar";
-import ItemListContainer from "./Components/ItemListContainer/ItemListContainer";
-import ItemDetailContainer from "./Components/ItemDetailContainer/ItemDetailContainer";
+import NavBar from "./components/NavBar/NavBar";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { CarritoProvider } from "./context/CarritoContext";
-import Cart from "./Components/Cart/Cart";
-import Checkout from "./Components/Checkout/Checkout";
+import Cart from "./components/Cart/Cart";
+import Checkout from "./components/Checkout/Checkout";
 
 const App = () => {
   return (
@@ -19,6 +19,7 @@ const App = () => {
               element={<ItemListContainer />}
             />
             <Route path="/item/:idItem" element={<ItemDetailContainer />} />
+
             <Route path="/cart" element={<Cart />} />
             <Route path="/checkout" element={<Checkout />} />
           </Routes>

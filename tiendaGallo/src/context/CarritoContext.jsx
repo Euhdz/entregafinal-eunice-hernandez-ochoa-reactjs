@@ -35,6 +35,7 @@ export const CarritoProvider = ({ children }) => {
   };
 
   const eliminarProducto = (id) => {
+    console.log("Deleting product with ID:", id);
     const productoEliminado = carrito.find((prod) => prod.item.id === id);
 
     const carritoActualizado = carrito.filter((prod) => prod.item.id !== id);

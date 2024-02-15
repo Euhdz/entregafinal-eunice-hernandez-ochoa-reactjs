@@ -24,21 +24,19 @@ const ItemDetail = ({ id, nombre, descripcion, stock, precio, img }) => {
         Id# {id}. {nombre}{" "}
       </h2>
       <h3> {descripcion}</h3>
-      <h3>Precio: ${precio} </h3>
+      <h3 className="precio">Precio: ${precio} </h3>
       <p>Stock: {stock} </p>
 
       {agregarCantidad > 0 ? (
         <>
-          <Link to="/cart">
-            <button type="button" className="btn btn-info">
-              Terminar Compra
-            </button>
-          </Link>
-          <Link to="/.">
-            <button type="button" className="btn btn-info">
-              Seguir Comprando
-            </button>
-          </Link>
+          <div className="boton-contenedor">
+            <Link to="/.">
+              <button type="button">Seguir Comprando</button>
+            </Link>
+            <Link to="/cart">
+              <button type="button">Terminar Compra</button>
+            </Link>
+          </div>
         </>
       ) : (
         <ItemCount

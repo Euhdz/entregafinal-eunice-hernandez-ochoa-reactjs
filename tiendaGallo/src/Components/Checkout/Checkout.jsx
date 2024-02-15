@@ -4,7 +4,6 @@ import { CarritoContext } from "../../context/CarritoContext";
 import { db } from "../../services/config";
 import { collection, addDoc } from "firebase/firestore";
 import Swal from "sweetalert2";
-
 import "./Checkout.css";
 
 const Checkout = () => {
@@ -70,7 +69,6 @@ const Checkout = () => {
         Swal.fire({
           title: "Se generó con éxito tu orden de compra",
           text: `El número de tu orden es: ${docRef.id}`,
-          icon: "success",
         }).then(function () {
           window.location = "./";
         });
@@ -82,8 +80,8 @@ const Checkout = () => {
   };
 
   return (
-    <div>
-      <h2>Checkout - Finalizamos la Compra</h2>
+    <div className="checkout-contenedor">
+      <h2>Finalizar la Compra</h2>
 
       <form onSubmit={manejadorSubmit}>
         {carrito.map((producto) => (

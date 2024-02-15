@@ -35,7 +35,6 @@ const Checkout = () => {
 
     //Creamos un objeto con todos los datos de la orden:
 
-    ////DUDA MIA: Checar por qué en cantidad no se pone el item o si se refiere a cantidad total.
     ////FALTA METER DESCRIPCION ( pero también en carrito)
     const orden = {
       items: carrito.map((producto) => ({
@@ -86,72 +85,71 @@ const Checkout = () => {
       <form onSubmit={manejadorSubmit}>
         {carrito.map((producto) => (
           <div key={producto.item.id}>
-            <p>
-              {" "}
-              {producto.item.nombre} x {producto.cantidad}{" "}
-            </p>
-            <p> {producto.item.precio} </p>
+            <p> {producto.item.nombre} </p>
+            <p> Precio x/unidad: ${producto.item.precio} </p>
+            <p> Unidades: {producto.cantidad} </p>
+
             <hr />
           </div>
         ))}
-        <div>
-          <label htmlFor="nombre">Nombre</label>
-          <input
-            type="text"
-            id="nombre"
-            onChange={(e) => setNombre(e.target.value)}
-          />
-        </div>
+        <div className="form-contenedor">
+          <div>
+            <label htmlFor="nombre">Nombre</label>
+            <input
+              type="text"
+              id="nombre"
+              onChange={(e) => setNombre(e.target.value)}
+            />
+          </div>
 
-        <div>
-          <label htmlFor="apellido">Apellido</label>
-          <input
-            type="text"
-            id="apellido"
-            onChange={(e) => setApellido(e.target.value)}
-          />
-        </div>
+          <div>
+            <label htmlFor="apellido">Apellido</label>
+            <input
+              type="text"
+              id="apellido"
+              onChange={(e) => setApellido(e.target.value)}
+            />
+          </div>
 
-        <div>
-          <label htmlFor="telefono">Teléfono</label>
-          <input
-            type="text"
-            id="telefono"
-            onChange={(e) => setTelefono(e.target.value)}
-          />
-        </div>
+          <div>
+            <label htmlFor="telefono">Teléfono</label>
+            <input
+              type="text"
+              id="telefono"
+              onChange={(e) => setTelefono(e.target.value)}
+            />
+          </div>
 
-        <div>
-          <label htmlFor="email">E-mail</label>
-          <input
-            type="email"
-            id="email"
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </div>
+          <div>
+            <label htmlFor="email">E-mail</label>
+            <input
+              type="email"
+              id="email"
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
 
-        <div>
-          <label htmlFor="emailconf">E-mail Confirmación</label>
-          <input
-            type="email"
-            id="emailconf"
-            onChange={(e) => setEmailConfirmacion(e.target.value)}
-          />
+          <div>
+            <label htmlFor="emailconf">E-mail Confirmación</label>
+            <input
+              type="email"
+              id="emailconf"
+              onChange={(e) => setEmailConfirmacion(e.target.value)}
+            />
+          </div>
         </div>
-
         {error && <p style={{ color: "red" }}> {error} </p>}
 
-        <div>
-          <button className="btnCheckout" disabled={carrito.length === 0}>
-            {" "}
-            Finalizar Orden{" "}
-          </button>
-          <button className="btnCheckout" type="reset">
+        <div className="boton-contenedor-checkout">
+          <button className="boton-checkout" type="reset">
             {" "}
             Borrar{" "}
           </button>
+          <button className="boton-checkout" disabled={carrito.length === 0}>
+            {" "}
+            Enviar Orden{" "}
+          </button>
         </div>
-        {/* PENDIENTE: meter estilos a botones, definir clase btnCheckout en css */}
 
         {/* {ordenId && (
           <strong>

@@ -1,4 +1,3 @@
-import React from "react";
 import CartItem from "../CartItem/CartItem";
 import { Link } from "react-router-dom";
 import { CarritoContext } from "../../context/CarritoContext";
@@ -22,7 +21,7 @@ const Cart = () => {
     <div className="cart-contenedor">
       <div className="prod-contenedor">
         {carrito.map((prod) => (
-          <div key={prod.id}>
+          <div className="cart-prods" key={prod.id}>
             {" "}
             <CartItem {...prod} />
             <button onClick={() => eliminarProducto(prod.item.id)}>
